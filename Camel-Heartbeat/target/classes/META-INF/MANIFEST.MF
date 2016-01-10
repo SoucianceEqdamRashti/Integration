@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1452425008877
+Build-Jdk: 1.8.0_60
+Built-By: Developer
+Bundle-ManifestVersion: 2
+Bundle-Name: Camel Blueprint Route
+Bundle-SymbolicName: hello-world
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.souciance.integration.camel;uses:="org.apache.camel.
+ builder,org.apache.camel.model";version="0.0.1.SNAPSHOT"
+Import-Package: org.apache.camel.builder;version="[2.15,3)",org.apache.c
+ amel.model;version="[2.15,3)",org.osgi.service.blueprint;version="[1.0.
+ 0,2.0.0)"
+Originally-Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-1.50.0
