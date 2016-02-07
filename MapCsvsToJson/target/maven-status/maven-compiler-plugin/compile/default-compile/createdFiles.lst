@@ -1,0 +1,3 @@
+org\souciance\integration\csvstojson\CsvToJsonRouteBuilder.class
+org\souciance\integration\csvstojson\IdentityToJson.class
+org\souciance\integration\csvstojson\Identity.class
