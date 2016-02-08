@@ -13,12 +13,13 @@ public class CsvToJsonRouteBuilder extends RouteBuilder {
 		// TODO Auto-generated method stub
 		BindyCsvDataFormat bindy = new BindyCsvDataFormat(org.souciance.integration.csvstojson.Identity.class);		
 		
-		from("file:C:/test/?fileName=input.csv")	
+		from("direct:start")
 		.unmarshal(bindy)		
 		.log("${body}")
-		.to("IdentityToJson")	
-		.to("file:C:/test/?fileName=output.json")
-		.log("done!")
+		.to("bean:IdToJson")
+		//.to("file:/test/?fileName=output.json")
+		.to("mock:result")
+		.log("${body}")
 		.end();
 		
 	}
