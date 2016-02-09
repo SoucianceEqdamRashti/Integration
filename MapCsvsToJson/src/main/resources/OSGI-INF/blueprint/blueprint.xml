@@ -9,6 +9,8 @@
   </bean>
   <bean id="IdentityToJson" class="org.souciance.integration.csvstojson.IdentityToJson">
   </bean>
+  <bean id="IdToJson" class="org.souciance.integration.csvstojson.IdToJson">
+  </bean>
 
   <camelContext xmlns="http://camel.apache.org/schema/blueprint">
     <routeBuilder ref="CsvToJsonRouteBuilder" />    
