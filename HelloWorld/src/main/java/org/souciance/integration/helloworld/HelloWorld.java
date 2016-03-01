@@ -14,7 +14,7 @@ public class HelloWorld extends RouteBuilder {
 		from("restlet:http://localhost:5000/hello")
 		.log("request received")
 		.setBody().simple("Hello to you too")
-		.log("response sent - again")
+		.log("response sent - againddd")
 		.end();
 		
 	}
