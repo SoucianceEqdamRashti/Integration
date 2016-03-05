@@ -37,7 +37,7 @@ public class MainRouteBuilder extends RouteBuilder {
 		.choice()		
 			.when(toXML)
 				.log(LoggingLevel.INFO, "Data will be mapped to xml structure")
-				.bean(org.souciance.integration.contentbasedrouter.Transform.class)
+				.bean(Transform.class)
 		         .marshal(jaxbDataFormat)			
 				.log(LoggingLevel.INFO, "Data will be mapped to xml structure: ${body}")		
 				.to("file://"+outputFolder+"/?fileName=output.xml")
