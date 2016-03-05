@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1457205180370
+Build-Jdk: 1.8.0_45
+Built-By: moeed
+Bundle-ManifestVersion: 2
+Bundle-Name: Camel Blueprint Route
+Bundle-SymbolicName: csvstojson
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.souciance.integration.contentbasedrouter;uses:="org.
+ apache.camel.builder,org.apache.camel,org.apache.camel.dataformat.bindy
+ .csv,org.apache.camel.spi,org.apache.camel.converter.jaxb,org.apache.ca
+ mel.model,javax.xml.bind.annotation,org.apache.camel.dataformat.bindy.a
+ nnotation,com.fasterxml.jackson.core,com.fasterxml.jackson.databind,com
+ .fasterxml.jackson.databind.node";version="0.0.1.SNAPSHOT"
+Import-Package: com.fasterxml.jackson.core;version="[2.6,3)",com.fasterx
+ ml.jackson.databind;version="[2.6,3)",com.fasterxml.jackson.databind.no
+ de;version="[2.6,3)",javax.xml.bind.annotation,org.apache.camel;version
+ ="[2.16,3)",org.apache.camel.builder;version="[2.16,3)",org.apache.came
+ l.component.properties;version="[2.16,3)",org.apache.camel.converter.ja
+ xb;version="[2.16,3)",org.apache.camel.dataformat.bindy.annotation;vers
+ ion="[2.16,3)",org.apache.camel.dataformat.bindy.csv;version="[2.16,3)"
+ ,org.apache.camel.model;version="[2.16,3)",org.apache.camel.spi;version
+ ="[2.16,3)",org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
+Originally-Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-1.50.0
