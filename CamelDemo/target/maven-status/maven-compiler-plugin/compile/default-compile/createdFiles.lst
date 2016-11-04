@@ -1,0 +1,7 @@
+org\souciance\integration\file\FileTransfer.class
+org\souciance\integration\cbr\ContentBasedRouter.class
+org\souciance\integration\mapping\CsvToXml.class
+org\souciance\integration\scheduler\Timer.class
+org\souciance\integration\audit\AuditEventNotifier.class
+org\souciance\integration\rest\RestDsl.class
+org\souciance\integration\rest\RestDsl$1.class
