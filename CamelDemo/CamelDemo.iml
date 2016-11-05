@@ -73,6 +73,16 @@
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.19.0-GA" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.findbugs:annotations:2.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.camel:camel-stream:2.17.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-jsonpath:2.17.0" level="project" />
+    <orderEntry type="library" name="Maven: com.jayway.jsonpath:json-path:2.1.0" level="project" />
+    <orderEntry type="library" name="Maven: net.minidev:json-smart:2.2.1" level="project" />
+    <orderEntry type="library" name="Maven: net.minidev:accessors-smart:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.camel:camel-netty4:2.17.0" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-all:4.0.34.Final" level="project" />
+    <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.ow2.asm:asm-commons:5.0.3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.ow2.asm:asm-tree:5.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.milyn:milyn-smooks-camel:1.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.milyn:milyn-smooks-javabean:1.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.milyn:milyn-smooks-core:1.7.0" level="project" />

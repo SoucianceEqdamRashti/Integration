@@ -1,7 +1,14 @@
 org\souciance\integration\file\FileTransfer.class
+org\souciance\integration\tcp\TcpServer.class
 org\souciance\integration\cbr\ContentBasedRouter.class
 org\souciance\integration\mapping\CsvToXml.class
-org\souciance\integration\scheduler\Timer.class
+org\souciance\integration\enrich\FileEnrich.class
 org\souciance\integration\audit\AuditEventNotifier.class
+org\souciance\integration\splitter\XmlSplitter.class
+org\souciance\integration\tcp\TcpClient.class
+org\souciance\integration\splitter\FileSplitter.class
+org\souciance\integration\splitter\JsonSplitter.class
+org\souciance\integration\scheduler\Timer.class
+org\souciance\integration\enrich\StringEnrich.class
 org\souciance\integration\rest\RestDsl.class
 org\souciance\integration\rest\RestDsl$1.class
