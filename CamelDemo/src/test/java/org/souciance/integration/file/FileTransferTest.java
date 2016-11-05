@@ -72,16 +72,17 @@ public class FileTransferTest extends CamelBlueprintTestSupport {
         context.getRouteDefinition("FileTransfer").adviceWith(context, new AdviceWithRouteBuilder() {
             @Override
             public void configure() throws Exception {
-                replaceFromWith("direct:FileTransfer1");
+                replaceFromWith("direct:sendFile");
             }
         });
 
         context.start();
-        template.sendBody("direct:FileTransfer1", "This is a test message");
+        template.sendBody("direct:sendFile", "This is a test message");
         Thread.sleep(1000);
         File file = new File("src/test/resources/filetransfer/fileTransferred.txt");
         assertTrue(file.exists());
         context.stop();
+        file.delete();
     }
 
 

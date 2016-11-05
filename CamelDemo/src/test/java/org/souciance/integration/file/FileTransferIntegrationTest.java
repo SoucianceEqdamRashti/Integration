@@ -51,6 +51,7 @@ public class FileTransferIntegrationTest extends CamelBlueprintTestSupport {
         File file = new File("src/test/resources/filetransfer/fileTransferred.txt");
         assertTrue(file.exists());
         context.stop();
+        file.delete();
     }
 
 

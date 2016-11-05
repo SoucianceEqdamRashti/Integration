@@ -13,18 +13,23 @@
   </cm:default-properties>
   </cm:property-placeholder>
 
-  <bean id="FileTransfer" class="org.souciance.integration.file.FileTransfer"/>
-  <bean id="CBR" class="org.souciance.integration.cbr.ContentBasedRouter"/>
+  <bean id="FileTransfer" class="org.souciance.integration.file.FileTransfer">
+    <property name="sourceUri" value="file://src/test/resources/filetransfer?fileName=fileTransfer.txt&amp;move=archive/${file:name.noext}-${date:now:yyyyMMdd-HHmmss}.${file:ext}"/>
+    <property name="targetUri" value="file://src/test/resources/filetransfer?fileName=fileTransferred.txt"/>
+  </bean>
+  <bean id="ContentBasedRouter" class="org.souciance.integration.cbr.ContentBasedRouter">
+    <property name="uri" value="file://src/test/resources/contentbasedrouter?fileName=cbr.xml&amp;move=archive/${file:name.noext}-${date:now:yyyyMMdd-HHmmss}.${file:ext}"/>
+    <property name="tove" value="file://src/test/resources/contentbasedrouter?fileName=tove.xml"/>
+    <property name="unknown" value="file://src/test/resources/contentbasedrouter?fileName=unknown.xml"/>
+  </bean>
   <bean id="RestDSL" class="org.souciance.integration.rest.RestDsl"/>
   <bean id="Timer" class="org.souciance.integration.scheduler.Timer"/>
-<!--<bean id="Smooks" class="org.souciance.integration.mapping.CsvToXml"/>-->
   <bean id="Audit" class="org.souciance.integration.audit.AuditEventNotifier"/>
   <camelContext id="cameldemo" xmlns="http://camel.apache.org/schema/blueprint" useMDCLogging="true">
 <routeBuilder ref="FileTransfer"/>
-    <routeBuilder ref="CBR"/>
+    <routeBuilder ref="ContentBasedRouter"/>
       <routeBuilder ref="RestDSL"/>
     <routeBuilder ref="Timer"/>
-      <!--<routeBuilder ref="Smooks"/>-->
   </camelContext>
 
 </blueprint>
