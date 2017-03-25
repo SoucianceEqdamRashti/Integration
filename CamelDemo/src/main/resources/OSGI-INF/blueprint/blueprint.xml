@@ -40,6 +40,8 @@
     <bean id="RestDSL" class="org.souciance.integration.rest.RestDsl"/>
     <bean id="Timer" class="org.souciance.integration.scheduler.Timer"/>
     <bean id="Audit" class="org.souciance.integration.audit.AuditEventNotifier"/>
+    <bean id="ValidateJson" class="org.souciance.integration.validate.CamelValidateJson"/>
+    <bean id="redirectHTTP" class="org.souciance.integration.http.RedirectHTTP"/>
     <camelContext id="cameldemo" xmlns="http://camel.apache.org/schema/blueprint" useMDCLogging="true">
         <routeBuilder ref="FileTransfer"/>
         <routeBuilder ref="ContentBasedRouter"/>
@@ -49,6 +51,8 @@
         <routeBuilder ref="XmlSplitter"/>
         <routeBuilder ref="FileSplitter"/>
         <routeBuilder ref="TcpClientServer"/>
+        <routeBuilder ref="ValidateJson"/>
+        <routeBuilder ref="redirectHTTP"/>
     </camelContext>
 
 </blueprint>
