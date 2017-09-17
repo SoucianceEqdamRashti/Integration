@@ -1,57 +1,59 @@
-DEFINE QLOCAL(${headers.QLocalName}) +
+${headers.CardId!""}
+
+DEFINE QLOCAL(${headers.NAME}) +
    ACCTQ(QMGR) +
-*  ALTDATE(2017-06-20) +
-*  ALTTIME(11.20.43) +
-   BOQNAME(' ') +
-   BOTHRESH(0) +
-   CLUSNL(' ') +
-   CLUSTER(' ') +
-   CLCHNAME(' ') +
-   CLWLPRTY(0) +
-   CLWLRANK(0) +
+*  ALTDATE(${headers.ALTDATE!''}) +
+*  ALTTIME(${headers.ALTTIME!''}) +
+   BOQNAME('${headers.BOQNAME!' '}') +
+   BOTHRESH(${headers.BOTHRESH!0}) +
+   CLUSNL('${headers.CLUSNL!' '}') +
+   CLUSTER(${headers.CLUSTER!""}) +
+   CLCHNAME('${headers.CLCHNAME!''}') +
+   CLWLPRTY(${headers.CLWLPRTY!0}) +
+   CLWLRANK(${headers.CLWRANK!0}) +
    CLWLUSEQ(QMGR) +
-*  CRDATE(2017-06-20) +
-*  CRTIME(11.20.43) +
-*  CURDEPTH(0) +
-   CUSTOM(' ') +
-   DEFBIND(OPEN) +
-   DEFPRTY(0) +
-   DEFPSIST(YES) +
-   DEFPRESP(SYNC) +
-   DEFREADA(NO) +
-   DEFSOPT(SHARED) +
-*  DEFTYPE(PREDEFINED) +
-   DESCR(${headers.QLocalDescription}) +
-   DISTL(NO) +
-   GET(ENABLED) +
+*  CRDATE(${headers.CRDATE!''}) +
+*  CRTIME(${headers.CRTIME!''}) +
+*  CURDEPTH(${headers.CURDEPTH!0}) +
+   CUSTOM(${headers.CUSTOM!''}) +
+   DEFBIND(${headers.DEFBIND!"OPEN"}) +
+   DEFPRTY(${headers.DEFPRTY!0}) +
+   DEFPSIST(${headers.DEFPSIST!"YES"}) +
+   DEFPRESP(${headers.DEFPRESP!"SYNC"}) +
+   DEFREADA(${headers.DEFREADA!"NO"}) +
+   DEFSOPT(${headers.DEFSOPT!"SHARED"}) +
+*  DEFTYPE(${headers.DEFTYPE!"PREDEFINED"}) +
+   DESCR('${headers.DESCR!"No description provided"}') +
+   DISTL(${headers.DISTL!"NO"}) +
+   GET(${headers.GET!"ENABLED"}) +
    HARDENBO +
-   INITQ(' ') +
-*  IPPROCS(0) +
-   MAXDEPTH(${headers.QLocalMaxDepth}) +
-   MAXMSGL(${headers.QLocalMaxMsgl}) +
-   MONQ(QMGR) +
-   MSGDLVSQ(PRIORITY) +
+   INITQ('${headers.INITQ!"" }') +
+*  IPPROCS(${headers.IPPROCS!0} ) +
+   MAXDEPTH(${headers.MAXDEPTH!999999999}) +
+   MAXMSGL(${headers.MAXMSGL!104857600}) +
+   MONQ(${headers.MONQ!"QMGR"}) +
+   MSGDLVSQ(${headers.MSGDLVSQ!"PRIORITY"}) +
    NOTRIGGER +
-   NPMCLASS(NORMAL) +
-*  OPPROCS(0) +
-   PROCESS(' ') +
-   PUT(ENABLED) +
-   PROPCTL(COMPAT) +
-   QDEPTHHI(80) +
-   QDEPTHLO(20) +
-   QDPHIEV(DISABLED) +
-   QDPLOEV(DISABLED) +
-   QDPMAXEV(ENABLED) +
-   QSVCIEV(NONE) +
-   QSVCINT(999999999) +
-   RETINTVL(999999999) +
-   SCOPE(QMGR) +
+   NPMCLASS(${headers.NPMCLASS!"NORMAL"}) +
+*  OPPROCS(${headers.OPPROCS!0}) +
+   PROCESS('${headers.PROCESS!""}') +
+   PUT(${headers.PUT!"ENABLED"}) +
+   PROPCTL(${headers.PROPCTL!"COMPAT"}) +
+   QDEPTHHI(${headers.QDEPTHHI!80}) +
+   QDEPTHLO(${headers.QDEPTHLO!20}) +
+   QDPHIEV(${headers.QDPHIEV!"DISABLED"}) +
+   QDPLOEV(${headers.QDPLOEV! "DISABLED"}) +
+   QDPMAXEV(${headers.QDPMAXEV!"ENABLED"}) +
+   QSVCIEV(${headers.QSVCIEV!"NONE"}) +
+   QSVCINT(${headers.QSVCINT!999999999?c}) +
+   RETINTVL(${headers.RETINTVL!999999999?c}) +
+   SCOPE(${headers.SCOPE!"QMGR"}) +
    SHARE +
-   STATQ(QMGR) +
-   TRIGDATA(' ') +
-   TRIGDPTH(1) +
-   TRIGMPRI(0) +
-   TRIGTYPE(FIRST) +
-   USAGE(NORMAL) +
+   STATQ(${headers.STATQ!"QMGR"}) +
+   TRIGDATA('${headers.TRIGDATA!""}') +
+   TRIGDPTH(${headers.TRIGDPTH!1}) +
+   TRIGMPRI(${headers.TRIGMPRI!0}) +
+   TRIGTYPE(${headers.TRIGTYPE!"FIRST"}) +
+   USAGE(${headers.USAGE!"NORMAL"}) +
    REPLACE
 *******************************************************************************
