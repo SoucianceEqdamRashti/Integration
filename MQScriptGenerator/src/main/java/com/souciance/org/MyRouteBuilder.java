@@ -11,9 +11,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class MyRouteBuilder extends RouteBuilder {
-    /**
-     * Let's configure the Camel routing rules using Java code...
-     */
+
     public void configure() throws UnknownHostException, InterruptedException {
         String user = System.getProperty("user.name"); //platform independent
         String hostname = InetAddress.getLocalHost().getHostName();
@@ -77,10 +75,10 @@ public class MyRouteBuilder extends RouteBuilder {
                         String name = exchange.getIn().getHeader("QLocalName").toString();
                         String maxDepth = exchange.getIn().getHeader("QLocalMaxDepth").toString();
                         String maxMsgl = exchange.getIn().getHeader("QLocalMaxMsgl").toString();
-                        exchange.getIn().setHeader("QLocalName", name.substring(2, name.length() - 2));
-                        exchange.getIn().setHeader("QLocalMaxDepth", maxDepth.substring(2, maxDepth.length() - 2));
-                        exchange.getIn().setHeader("QLocalMaxMsgl", maxMsgl.substring(2, maxMsgl.length() - 2));
-                        exchange.getIn().setHeader("QLocalDescription", "123Test");
+                        exchange.getIn().setHeader("NAME", name.substring(2, name.length() - 2));
+                        exchange.getIn().setHeader("MAXDEPTH", maxDepth.substring(2, maxDepth.length() - 2));
+                        exchange.getIn().setHeader("MAXMSGL", maxMsgl.substring(2, maxMsgl.length() - 2));
+                        exchange.getIn().setHeader("QSVCINT", "999999999999999");
 
                     }
                 })
