@@ -1,0 +1,84 @@
+{
+    "MQScript": {
+            "Author": "Souciance Eqdam Rashti",
+            "Integration": "IPX_XXX",
+        "QueueManagers": [
+
+                {
+                    "name":"SELUWMB20",
+                    "QLocal": [
+                        {
+                            "NAME": "IP7.PROCESS.LOMV.IN",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        },
+                        {
+                            "NAME": "IP7.PROCESS.LOMV.OUT",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        },
+                        {
+                            "NAME": "IP7.PROCESS.LOMV.BACKOUT",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        }
+                    ],
+                    "QRemote": [
+                        {
+                            "NAME": "IP7R.PROCESS1.LOMV.IN",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        },
+                        {
+                            "NAME": "IP7R.PROCESS1.LOMV.OUT",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        },
+                        {
+                            "NAME": "IP7R.PROCESS1.LOMV.BACKOUT",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        }
+                    ]
+                },
+                 {
+                    "name":"SELUMWB21",
+                    "QLocal": [
+                        {
+                            "NAME": "IP7.PROCESS2.LOMV.IN",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        },
+                        {
+                            "NAME": "IP7.PROCESS2.LOMV.OUT",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        },
+                        {
+                            "NAME": "IP7.PROCESS2.LOMV.BACKOUT",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        }
+                    ],
+                    "QRemote": [
+                        {
+                            "NAME": "IP7R.PROCESS.LOMV.IN",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        },
+                        {
+                            "name": "IP7R.PROCESS.LOMV.OUT",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        },
+                        {
+                            "NAME": "IP7R.PROCESS.LOMV.BACKOUT",
+                            "MAXDEPTH": "5000",
+                            "MAXMSGL": "94371840"
+                        }
+                    ]
+                }
+
+        ]
+    }
+}
