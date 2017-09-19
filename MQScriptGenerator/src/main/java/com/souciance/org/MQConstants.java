@@ -1,0 +1,226 @@
+package com.souciance.org;
+
+/**
+ * Created by moeed on 2017-09-19.
+ */
+public class MQConstants {
+    public enum MQQueueAliasAttributes {
+        PATRON_STATUS_REQUEST("23"),
+        CHECKOUT_REQUEST("11"),
+        CHECKIN_REQUEST("09"),
+        BLOCK_PATRON_REQUEST("01"),
+        SC_STATUS_REQUEST("99"),
+        ACS_RESEND_REQUEST("97"),
+        LOGIN_REQUEST("93"),
+        PATRON_INFORMATION_REQUEST("63"),
+        END_PATRON_SESSION_REQUEST("35"),
+        FEE_PAID_REQUEST("37"),
+        ITEM_INFORMATION_REQUEST("17"),
+        ITEM_STATUS_UPDATE_REQUEST("19"),
+        PATRON_ENABLE_REQUEST("25"),
+        HOLD_REQUEST("15"),
+        RENEW_REQUEST("29"),
+        RENEW_ALL_REQUEST("65"),
+        PATRON_STATUS_RESPONSE("24"),
+        CHECKOUT_RESPONSE("12"),
+        CHECKIN_RESPONSE("10"),
+        SC_STATUS_RESPONSE("98"),
+        ACS_RESEND_RESPONSE("96"),
+        LOGIN_RESPONSE("94"),
+        PATRON_INFORMATION_RESPONSE("64"),
+        END_PATRON_SESSION_RESPONSE("36"),
+        FEE_PAID_RESPONSE("38"),
+        ITEM_INFORMATION_RESPONSE("18"),
+        ITEM_STATUS_UPDATE_RESPONSE("20"),
+        PATRON_ENABLE_RESPONSE("26"),
+        HOLD_RESPONSE("16"),
+        RENEW_RESPONSE("30"),
+        RENEW_ALL_RESPONSE("66");
+
+        private final String identifier;
+
+        MQQueueAliasAttributes(String identifier) {
+            this.identifier = identifier;
+        }
+
+        public String getIdentifier() {
+            return identifier;
+        }
+    }
+    public enum MQQueueLocalAttributes {
+        PATRON_STATUS_REQUEST("23"),
+        CHECKOUT_REQUEST("11"),
+        CHECKIN_REQUEST("09"),
+        BLOCK_PATRON_REQUEST("01"),
+        SC_STATUS_REQUEST("99"),
+        ACS_RESEND_REQUEST("97"),
+        LOGIN_REQUEST("93"),
+        PATRON_INFORMATION_REQUEST("63"),
+        END_PATRON_SESSION_REQUEST("35"),
+        FEE_PAID_REQUEST("37"),
+        ITEM_INFORMATION_REQUEST("17"),
+        ITEM_STATUS_UPDATE_REQUEST("19"),
+        PATRON_ENABLE_REQUEST("25"),
+        HOLD_REQUEST("15"),
+        RENEW_REQUEST("29"),
+        RENEW_ALL_REQUEST("65"),
+        PATRON_STATUS_RESPONSE("24"),
+        CHECKOUT_RESPONSE("12"),
+        CHECKIN_RESPONSE("10"),
+        SC_STATUS_RESPONSE("98"),
+        ACS_RESEND_RESPONSE("96"),
+        LOGIN_RESPONSE("94"),
+        PATRON_INFORMATION_RESPONSE("64"),
+        END_PATRON_SESSION_RESPONSE("36"),
+        FEE_PAID_RESPONSE("38"),
+        ITEM_INFORMATION_RESPONSE("18"),
+        ITEM_STATUS_UPDATE_RESPONSE("20"),
+        PATRON_ENABLE_RESPONSE("26"),
+        HOLD_RESPONSE("16"),
+        RENEW_RESPONSE("30"),
+        RENEW_ALL_RESPONSE("66");
+
+        private final String identifier;
+
+        MQQueueLocalAttributes(String identifier) {
+            this.identifier = identifier;
+        }
+
+        public String getIdentifier() {
+            return identifier;
+        }
+    }
+
+    public enum MQQueueRemoteAttributes {
+        PATRON_STATUS_REQUEST("23"),
+        CHECKOUT_REQUEST("11"),
+        CHECKIN_REQUEST("09"),
+        BLOCK_PATRON_REQUEST("01"),
+        SC_STATUS_REQUEST("99"),
+        ACS_RESEND_REQUEST("97"),
+        LOGIN_REQUEST("93"),
+        PATRON_INFORMATION_REQUEST("63"),
+        END_PATRON_SESSION_REQUEST("35"),
+        FEE_PAID_REQUEST("37"),
+        ITEM_INFORMATION_REQUEST("17"),
+        ITEM_STATUS_UPDATE_REQUEST("19"),
+        PATRON_ENABLE_REQUEST("25"),
+        HOLD_REQUEST("15"),
+        RENEW_REQUEST("29"),
+        RENEW_ALL_REQUEST("65"),
+        PATRON_STATUS_RESPONSE("24"),
+        CHECKOUT_RESPONSE("12"),
+        CHECKIN_RESPONSE("10"),
+        SC_STATUS_RESPONSE("98"),
+        ACS_RESEND_RESPONSE("96"),
+        LOGIN_RESPONSE("94"),
+        PATRON_INFORMATION_RESPONSE("64"),
+        END_PATRON_SESSION_RESPONSE("36"),
+        FEE_PAID_RESPONSE("38"),
+        ITEM_INFORMATION_RESPONSE("18"),
+        ITEM_STATUS_UPDATE_RESPONSE("20"),
+        PATRON_ENABLE_RESPONSE("26"),
+        HOLD_RESPONSE("16"),
+        RENEW_RESPONSE("30"),
+        RENEW_ALL_RESPONSE("66");
+
+        private final String identifier;
+
+        MQQueueRemoteAttributes(String identifier) {
+            this.identifier = identifier;
+        }
+
+        public String getIdentifier() {
+            return identifier;
+        }
+    }
+
+    public enum MQTopicAttributes {
+        PATRON_STATUS_REQUEST("23"),
+        CHECKOUT_REQUEST("11"),
+        CHECKIN_REQUEST("09"),
+        BLOCK_PATRON_REQUEST("01"),
+        SC_STATUS_REQUEST("99"),
+        ACS_RESEND_REQUEST("97"),
+        LOGIN_REQUEST("93"),
+        PATRON_INFORMATION_REQUEST("63"),
+        END_PATRON_SESSION_REQUEST("35"),
+        FEE_PAID_REQUEST("37"),
+        ITEM_INFORMATION_REQUEST("17"),
+        ITEM_STATUS_UPDATE_REQUEST("19"),
+        PATRON_ENABLE_REQUEST("25"),
+        HOLD_REQUEST("15"),
+        RENEW_REQUEST("29"),
+        RENEW_ALL_REQUEST("65"),
+        PATRON_STATUS_RESPONSE("24"),
+        CHECKOUT_RESPONSE("12"),
+        CHECKIN_RESPONSE("10"),
+        SC_STATUS_RESPONSE("98"),
+        ACS_RESEND_RESPONSE("96"),
+        LOGIN_RESPONSE("94"),
+        PATRON_INFORMATION_RESPONSE("64"),
+        END_PATRON_SESSION_RESPONSE("36"),
+        FEE_PAID_RESPONSE("38"),
+        ITEM_INFORMATION_RESPONSE("18"),
+        ITEM_STATUS_UPDATE_RESPONSE("20"),
+        PATRON_ENABLE_RESPONSE("26"),
+        HOLD_RESPONSE("16"),
+        RENEW_RESPONSE("30"),
+        RENEW_ALL_RESPONSE("66");
+
+        private final String identifier;
+
+        MQTopicAttributes(String identifier) {
+            this.identifier = identifier;
+        }
+
+        public String getIdentifier() {
+            return identifier;
+        }
+    }
+
+    public enum MQSubscriptionAttributes {
+        PATRON_STATUS_REQUEST("23"),
+        CHECKOUT_REQUEST("11"),
+        CHECKIN_REQUEST("09"),
+        BLOCK_PATRON_REQUEST("01"),
+        SC_STATUS_REQUEST("99"),
+        ACS_RESEND_REQUEST("97"),
+        LOGIN_REQUEST("93"),
+        PATRON_INFORMATION_REQUEST("63"),
+        END_PATRON_SESSION_REQUEST("35"),
+        FEE_PAID_REQUEST("37"),
+        ITEM_INFORMATION_REQUEST("17"),
+        ITEM_STATUS_UPDATE_REQUEST("19"),
+        PATRON_ENABLE_REQUEST("25"),
+        HOLD_REQUEST("15"),
+        RENEW_REQUEST("29"),
+        RENEW_ALL_REQUEST("65"),
+        PATRON_STATUS_RESPONSE("24"),
+        CHECKOUT_RESPONSE("12"),
+        CHECKIN_RESPONSE("10"),
+        SC_STATUS_RESPONSE("98"),
+        ACS_RESEND_RESPONSE("96"),
+        LOGIN_RESPONSE("94"),
+        PATRON_INFORMATION_RESPONSE("64"),
+        END_PATRON_SESSION_RESPONSE("36"),
+        FEE_PAID_RESPONSE("38"),
+        ITEM_INFORMATION_RESPONSE("18"),
+        ITEM_STATUS_UPDATE_RESPONSE("20"),
+        PATRON_ENABLE_RESPONSE("26"),
+        HOLD_RESPONSE("16"),
+        RENEW_RESPONSE("30"),
+        RENEW_ALL_RESPONSE("66");
+
+        private final String identifier;
+
+        MQSubscriptionAttributes(String identifier) {
+            this.identifier = identifier;
+        }
+
+        public String getIdentifier() {
+            return identifier;
+        }
+    }
+
+}
