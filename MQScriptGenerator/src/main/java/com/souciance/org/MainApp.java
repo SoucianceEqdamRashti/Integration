@@ -1,5 +1,6 @@
 package com.souciance.org;
 
+import com.souciance.org.routes.MQRoutes;
 import org.apache.camel.main.Main;
 
 /**
@@ -12,7 +13,7 @@ public class MainApp {
      */
     public static void main(String... args) throws Exception {
         Main main = new Main();
-        main.addRouteBuilder(new MyRouteBuilder());
+        main.addRouteBuilder(new MQRoutes());
         main.run(args);
     }
 
