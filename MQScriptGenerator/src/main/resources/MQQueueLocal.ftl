@@ -1,5 +1,3 @@
-${headers.CardId!""}
-
 DEFINE QLOCAL(${headers.NAME}) +
    ACCTQ(QMGR) +
 *  ALTDATE(${headers.ALTDATE!''}) +
