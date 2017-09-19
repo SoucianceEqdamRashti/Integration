@@ -26,18 +26,39 @@
                     "QRemote": [
                         {
                             "NAME": "IP7R.PROCESS1.LOMV.IN",
-                            "MAXDEPTH": "5000",
-                            "MAXMSGL": "94371840"
+                            "RQMNAME": "500DFDSFDSF0",
+                            "RNAME": "94371840",
+                            "XMITQ": "TEST"
                         },
                         {
                             "NAME": "IP7R.PROCESS1.LOMV.OUT",
-                            "MAXDEPTH": "5000",
-                            "MAXMSGL": "94371840"
+                            "RQMNAME": "50DFSDFSDFDS00",
+                            "RNAME": "94371840",
+                            "XMITQ": "DFDSF"
                         },
                         {
                             "NAME": "IP7R.PROCESS1.LOMV.BACKOUT",
-                            "MAXDEPTH": "5000",
-                            "MAXMSGL": "94371840"
+                            "RQMNAME": "50DSFSDFSDFSD00",
+                            "RNAME": "94371840",
+                            "XMITQ": "DFSDF"
+                        }
+                    ]
+                    ,
+                    "QAlias": [
+                        {
+                            "NAME": "IP7A.PROCESS1.LOMV.IN",
+                            "TARGET": "IP7R.PROCESS1.LOMV.IN",
+                            "DESCR": "My Alias Queue"
+                        },
+                        {
+                            "NAME": "IP7R.PROCESS1.LOMV.OUT",
+                            "TARGET": "5000",
+                            "DESCR": "94371840 Alias"
+                        },
+                        {
+                            "NAME": "IP7A.PROCESS1.LOMV.BACKOUT",
+                            "TARGET": "IP7R.PROCESS1.LOMV.BACKOUT",
+                            "DESCR": " Alias 94371840"
                         }
                     ]
                 },
@@ -61,20 +82,22 @@
                         }
                     ],
                     "QRemote": [
-                        {
-                            "NAME": "IP7R.PROCESS.LOMV.IN",
-                            "MAXDEPTH": "5000",
-                            "MAXMSGL": "94371840"
+                        {   "NAME":"DSFDSFSDFD",
+                            "RQMNAME": "DSFDFDSFSDSDFS",
+                            "RNAME": "DSFSDFSD",
+                            "XMITQ": "DFSDF"
                         },
                         {
-                            "name": "IP7R.PROCESS.LOMV.OUT",
-                            "MAXDEPTH": "5000",
-                            "MAXMSGL": "94371840"
+                            "NAME": "IP7R.PROCESS1.LOMV.OUT",
+                            "RQMNAME": "FDSFSDFSDFSDF",
+                            "RNAME": "94371840",
+                            "XMITQ": "DFSDF"
                         },
                         {
-                            "NAME": "IP7R.PROCESS.LOMV.BACKOUT",
-                            "MAXDEPTH": "5000",
-                            "MAXMSGL": "94371840"
+                            "NAME": "IP7R.PROCESS1.LOMV.BACKOUT",
+                            "RQMNAME": "50DSFSDFSDFSD00",
+                            "RNAME": "94371840",
+                            "XMITQ": "DFSDF"
                         }
                     ]
                 }
