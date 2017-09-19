@@ -1,5 +1,6 @@
 package com.souciance.org.routes;
 
+import com.souciance.org.MQConstants;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.ExpressionBuilder;
@@ -54,7 +55,7 @@ public class MQRoutes extends RouteBuilder {
         from("direct:QAlias")
                 .split(ExpressionBuilder.languageExpression("jsonpath", "$..QAlias[*]"))
                 .log("QUEUE Alias --> ${body}")
-                .setHeader("NAME", ExpressionBuilder.languageExpression("jsonpath", "$..NAME"))
+                .setHeader(MQConstants.MQQueueAliasAttributes.NAME.getAttribute(), ExpressionBuilder.languageExpression("jsonpath", "$..NAME"))
                 .setHeader("TARGET", ExpressionBuilder.languageExpression("jsonpath", "$..TARGET"))
                 .setHeader("DESCR", ExpressionBuilder.languageExpression("jsonpath", "$..DESCR"))
                 .process(new Processor() {
