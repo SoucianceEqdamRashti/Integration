@@ -19,7 +19,6 @@ public class MQRoutes extends RouteBuilder {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
         String time = dtf.format(now);
-
         from("file:src/data?fileName=MQ.json&noop=true") //add idempotent=true to check when file is modified
                 .convertBodyTo(String.class)
                 .setHeader("Author", ExpressionBuilder.languageExpression("jsonpath", "$.MQScript..Author"))
@@ -28,29 +27,11 @@ public class MQRoutes extends RouteBuilder {
                 .setHeader("Integration", ExpressionBuilder.languageExpression("jsonpath", "$.MQScript..Integration"))
                 .setHeader("User", constant(user))
                 .setHeader("Host", constant(hostname))
-                .process(new Processor() {
-                    public void process(Exchange exchange) throws Exception {
-                        String author = exchange.getIn().getHeader("Author").toString();
-                        String integration = exchange.getIn().getHeader("Integration").toString();
-                        exchange.getIn().setHeader("Author", author.substring(2, author.length() - 2));
-                        exchange.getIn().setHeader("Integration", integration.substring(2, integration.length() - 2));
-                    }
-                })
-                .log("${headers.Author}")
-                .log("${headers.Date}")
-                .log("${headers.Integration}")
                 .split(ExpressionBuilder.languageExpression("jsonpath", "$..QueueManagers[*]"))
-                .setProperty("FileName", ExpressionBuilder.languageExpression("jsonpath", "$.name"))
-                .setHeader("QueueManager", ExpressionBuilder.languageExpression("jsonpath", "$.name"))
-                .setHeader(Exchange.FILE_NAME, constant(exchangeProperty("FileName").convertToString().append(".mqsc")))
-                .recipientList(constant("direct:testFile, direct:Qlocal, direct:QAlias, direct:QRemote"));
-
-        from("direct:testFile")
-                .to("freemarker:MQScriptHeader.ftl").setBody(body().append("\r\n"))
-                .to("file:src/data")
-                .end();
-
-
+                    .setProperty("FileName", ExpressionBuilder.languageExpression("jsonpath", "$.name"))
+                    .setHeader("QueueManager", ExpressionBuilder.languageExpression("jsonpath", "$.name"))
+                    .setHeader(Exchange.FILE_NAME, constant(exchangeProperty("FileName").convertToString().append(".mqsc")))
+                    .recipientList(constant("direct:MQScriptHeader, direct:MQ_Queuelocal"));//, direct:QAlias, direct:QRemote"));
 
         from("direct:QAlias")
                 .split(ExpressionBuilder.languageExpression("jsonpath", "$..QAlias[*]"))
