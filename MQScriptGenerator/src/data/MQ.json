@@ -40,7 +40,8 @@
                             "NAME": "IP7R.PROCESS1.LOMV.BACKOUT",
                             "RQMNAME": "50DSFSDFSDFSD00",
                             "RNAME": "94371840",
-                            "XMITQ": "DFSDF"
+                            "XMITQ": "DFSDF",
+                            "SCOPE": "NOT QMGR"
                         }
                     ]
                     ,
@@ -58,7 +59,8 @@
                         {
                             "NAME": "IP7A.PROCESS1.LOMV.BACKOUT",
                             "TARGET": "IP7R.PROCESS1.LOMV.BACKOUT",
-                            "DESCR": " Alias 94371840"
+                            "DESCR": " Alias 94371840",
+                            "SCOPE": "NOT QMGR"
                         }
                     ]
                 },
