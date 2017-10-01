@@ -1,8 +1,6 @@
 package com.souciance.org;
 
-import com.souciance.org.routes.MQQueueLocal;
-import com.souciance.org.routes.MQRoutes;
-import com.souciance.org.routes.MQScriptHeader;
+import com.souciance.org.routes.*;
 import org.apache.camel.main.Main;
 
 /**
@@ -17,6 +15,8 @@ public class MainApp {
         Main main = new Main();
         main.addRouteBuilder(new MQScriptHeader());
         main.addRouteBuilder(new MQQueueLocal());
+        main.addRouteBuilder(new MQQueueAlias());
+        main.addRouteBuilder(new MQQueueRemote());
         main.addRouteBuilder(new MQRoutes());
         main.run(args);
     }
