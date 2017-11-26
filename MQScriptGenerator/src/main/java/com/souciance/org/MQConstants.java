@@ -86,18 +86,19 @@ public class MQConstants {
         TRIGTYPE("TRIGTYPE"),
         USAGE("USAGE");
 
-        private final String identifier;
+        private final String attribute;
 
-        MQQueueLocalAttributes(String identifier) {
-            this.identifier = identifier;
+        MQQueueLocalAttributes(String attribute) {
+            this.attribute = attribute;
         }
 
-        public String getIdentifier() {
-            return identifier;
+        public String getAttribute() {
+            return attribute;
         }
     }
 
     public enum MQQueueRemoteAttributes {
+        NAME("NAME"),
         ALTDATE("ALTDATE"),
         ALTTIME("ALTTIME"),
         CLUSNL("CLUSNL"),
@@ -116,12 +117,12 @@ public class MQConstants {
         RNAME("RNAME"),
         SCOPE("SCOPE"),
         XMITQ("XMITQ");
-        private final String identifier;
-        MQQueueRemoteAttributes(String identifier) {
-            this.identifier = identifier;
+        private final String attribute;
+        MQQueueRemoteAttributes(String attribute) {
+            this.attribute = attribute;
         }
-        public String getIdentifier() {
-            return identifier;
+        public String getAttribute() {
+            return attribute;
         }
     }
 
