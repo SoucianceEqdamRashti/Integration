@@ -50,7 +50,7 @@ public class MQQueueRemote extends RouteBuilder {
                 .setHeader(Exchange.FILE_NAME, header("QueueManager").append(".mqsc"))
                 .to("freemarker:MQQueueRemote.ftl")
                 .setBody(body().append("\r\n"))
-                .to("file:src/data?fileExist=Append")
+                .to("file:script?fileExist=Append")
                 .end();
     }
 }

@@ -17,8 +17,9 @@ public class MQRoutes extends RouteBuilder {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
         String time = dtf.format(now);
-        from("file:src/data?fileName=MQ.json&noop=true") //add idempotent=true to check when file is modified
+        from("file:templates?fileName=MQ.json&noop=true") //add idempotent=true to check when file is modified
                 .convertBodyTo(String.class)
+                .log("${body}")
                 .setHeader("Author", ExpressionBuilder.languageExpression("jsonpath", "$.MQScript..Author"))
                 .setHeader("Date", ExpressionBuilder.languageExpression("simple", "${date:now:yyyy-MM-dd}"))
                 .setHeader("Time", constant(time))
@@ -29,7 +30,7 @@ public class MQRoutes extends RouteBuilder {
                 .setProperty("FileName", ExpressionBuilder.languageExpression("jsonpath", "$.name"))
                 .setHeader("QueueManager", ExpressionBuilder.languageExpression("jsonpath", "$.name"))
                 .setHeader(Exchange.FILE_NAME, constant(exchangeProperty("FileName").convertToString().append(".mqsc")))
-                .recipientList(constant("direct:MQ_Header, direct:MQ_Queuelocal, direct:MQ_QueueAlias, direct:MQ_QueueRemote"))
+                .recipientList(constant("direct:MQ_Header"))//, direct:MQ_Queuelocal, direct:MQ_QueueAlias, direct:MQ_QueueRemote"))
         .end();
     }
 }
